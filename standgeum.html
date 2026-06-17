@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>금희 아크릴 스탠드 | 명조 팬 굿즈 스토어</title>
+    <style>
+        /* 상세페이지 전용 프리미엄 스타일 */
+        .detail-wrapper {
+            max-width: 1200px;
+            margin: 100px auto 60px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        /* 좌측 이미지 섹션 (스크롤 시 고정) */
+        .detail-gallery {
+            flex: 1;
+            position: sticky;
+            top: 100px; /* 네비게이션 바 높이 아래에 고정 */
+            background-color: #22282e;
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #374151;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .detail-gallery img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .detail-gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        /* 우측 정보 섹션 */
+        .detail-info {
+            flex: 1;
+            padding: 20px 0;
+        }
+        .detail-info h1 {
+            font-size: 38px;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        .detail-info .price {
+            font-size: 28px;
+            color: #7c3aed;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        /* 구분선 */
+        .divider {
+            height: 1px;
+            background-color: #374151;
+            margin: 30px 0;
+        }
+
+        .detail-desc {
+            font-size: 16px;
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+
+        /* 스펙 표 */
+        .spec-table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+        .spec-table th, .spec-table td {
+            padding: 15px 0;
+            border-bottom: 1px solid #374151;
+            text-align: left;
+            font-size: 15px;
+        }
+        .spec-table th {
+            color: #ffffff;
+            width: 100px;
+        }
+        .spec-table td {
+            color: #9ca3af;
+        }
+
+        /* 수량 및 구매 버튼 영역 */
+        .purchase-area {
+            margin-top: 40px;
+            background-color: #22282e;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #374151;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .quantity-control label {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .quantity-input {
+            width: 60px;
+            padding: 10px;
+            background-color: #060708;
+            color: #ffffff;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .btn-buy-now, .btn-add-cart {
+            flex: 1;
+            padding: 18px 0;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-buy-now {
+            background-color: #ffffff;
+            color: #060708;
+            border: none;
+        }
+        .btn-buy-now:hover {
+            background-color: #d1d5db;
+        }
+        .btn-add-cart {
+            background-color: #7c3aed;
+            color: #ffffff;
+            border: none;
+        }
+        .btn-add-cart:hover {
+            background-color: #5b21b6;
+        }
+
+        /* 모바일 세로 배치 */
+        @media (max-width: 900px) {
+            .detail-wrapper {
+                flex-direction: column;
+            }
+            .detail-gallery {
+                position: relative;
+                top: 0;
+                width: 100%;
+            }
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">MYUNGJO GOODS</div>
+        <ul>
+            <li><a href="index.html#portfolio">← 마켓 메인으로 돌아가기</a></li>
+        </ul>
+    </nav>
+
+    <div class="detail-wrapper">
+        <div class="detail-gallery">
+    <img src="images/geumheestand.png" alt="장리 아크릴 스탠드">
+</div>
+
+        <div class="detail-info">
+            <p style="color: #9ca3af; margin-bottom: 10px; font-weight: bold;">ACRYLIC STAND</p>
+            <h1>금희 아크릴 스탠드</h1>
+            <div class="price">18,000 원</div>
+            
+            <div class="divider"></div>
+
+            <p class="detail-desc">
+                명조: 워더링 웨이브의 매력적인 공명자, 금희의 화려한 스킬 이펙트와 특유의 고혹적인 분위기를 담아낸 고품질 아크릴 스탠드입니다.<br><br>
+                정밀한 양면 인쇄 공정을 거쳐 선명한 색감을 자랑하며, 책상이나 장식장에 올려두기 좋은 최적의 사이즈로 제작되었습니다.
+            </p>
+
+            <table class="spec-table">
+                <tr>
+                    <th>소재</th>
+                    <td>투명 아크릴 (3T)</td>
+                </tr>
+                <tr>
+                    <th>사이즈</th>
+                    <td>약 150mm x 120mm</td>
+                </tr>
+                <tr>
+                    <th>구성품</th>
+                    <td>캐릭터 파츠, 배경 파츠, 하단 베이스</td>
+                </tr>
+                <tr>
+                    <th>배송안내</th>
+                    <td>주문 마감 후 3주 이내 일괄 배송</td>
+                </tr>
+            </table>
+
+            <div class="purchase-area">
+                <div class="quantity-control">
+                    <label for="qty">수량</label>
+                    <input type="number" id="qty" class="quantity-input" value="1" min="1" max="2">
+                    <span style="color: #6b7280; font-size: 13px;">(1인당 최대 2개)</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-add-cart" onclick="alert('장바구니 기능은 메인 페이지에서 지원됩니다.\n메인 페이지로 이동하여 담아주세요!')">🛒 장바구니 담기</button>
+                    <a href="index.html#contact" class="btn-buy-now" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">바로 주문하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Myungjo Fan Goods. All rights Reserved.</p>
+    </footer>
+</body>
+</html>
